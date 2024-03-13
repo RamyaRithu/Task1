@@ -1,0 +1,316 @@
+                                       Task-1
+1.	Write a program to print the numbers from 10 to 50 using for loop/while loop
+                                             For loop
+2.	package com.simplejavacode;
+3.	
+4.	public class Hello {
+5.	
+6.		public static void main(String[] args) {
+7.			
+8.			for(int i=10;i<=50;i++)
+9.			{
+10.				System.out.println(i);
+11.			}
+12.	
+13.		}
+
+Output:
+
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+	
+
+                     While loop
+
+package com.simplejavacode;
+
+public class Hello {
+
+	public static void main(String args[])
+	{
+		
+		 int i=10;  
+		    while(i<=50){  
+		        System.out.println(i);  
+		    i++;  
+		    }  
+		}  
+		} 
+
+
+
+output:
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+
+2. write a program to find the given number is positive or negative
+
+import java.util.Scanner; 
+
+public class Main {
+
+	public static void main(String args[])
+	{
+		
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter the value:");
+		 int number=sc.nextInt();
+		 
+		 
+		 if(number>0) {
+			 
+			 System.out.println("The number is positive");
+			 
+			 }
+		 else {
+			 System.out.println("The number is negative");
+		 }
+		    
+		      
+		    }  
+		}  
+ Input:80
+output:The number is positive
+
+3.write down the program to reverse the given number?
+
+
+import java.util.Scanner; 
+
+public class Main {
+
+	
+
+	public static void main(String args[])
+	{
+	    Scanner sc=new Scanner(System.in);
+		 System.out.println("Enter the value:");
+		 int number=sc.nextInt();
+		
+		int  reverse = 0;  
+		while(number != 0)   
+		{  
+		int remainder = number % 10;  
+		reverse = reverse * 10 + remainder;  
+		number = number/10;  
+		}  
+		System.out.println("The reverse of the given number is: " + reverse);  
+		}  
+		}  
+
+
+Input:345
+output:543
+
+4. find the smallest number among three numbers
+
+import java.util.Scanner; 
+
+public class Main {
+
+	
+
+	public static void main(String args[])
+	{
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter the number1:");
+		 int num1=sc.nextInt();
+		 System.out.println("Enter the number2:");
+		 int num2=sc.nextInt();
+		 System.out.println("Enter the number3:");
+		 int num3=sc.nextInt();
+		
+		int smallest;
+		
+	     if(num1<num2) {
+	            if(num3<num1) {
+	                smallest = num3;
+	            } else {
+	                smallest = num1;
+	            }
+	        } else {
+	            if(num2<num3) {
+	                smallest = num2;
+	            } else {
+	                smallest = num3;
+	            }
+	        }
+	         
+	        System.out.println(smallest + " is the smallest.");
+	    }
+	}
+
+output:
+Enter the number1:
+34
+Enter the number2:
+56
+Enter the number3:
+67
+34 is the smallest.
+
+5. Write the java program that take the purchase amount as input and calculate final payable
+•	If purchase amount is less than 500 there is no discount applied
+•	If the purchase amount between 500 to 1000, 10% discount applied
+•	If the purchase amount is greater than 1000, 20% applied
+
+
+import java.util.Scanner; 
+
+public class Main {
+
+	
+
+	public static void main(String args[])
+	{
+	    float totalCost, cost, discount;
+	      Scanner scan = new Scanner(System.in);
+	      
+	      System.out.print("Enter the Total Amount of Shopping: ");
+	      totalCost = scan.nextFloat();
+	      if(totalCost<500)
+	      {
+	         cost = totalCost;
+	      }
+	      else if(totalCost>500 && totalCost<1000)
+	      {
+	         discount = (totalCost*10)/100;
+	         cost = totalCost - discount;
+	      }
+	      
+	      else
+	      {
+	         discount = (totalCost*20)/100;
+	         cost = totalCost - discount;
+	      }
+	      System.out.println("\nThe cost to be Paid is: " + cost);
+
+
+	    
+	}
+	}
+
+
+output:
+Enter the Total Amount of Shopping: 6789
+
+The cost to be Paid is: 5431.2
+
+6 .pattern program  
+
+
+package com.simplejavacode;
+
+import java.util.Scanner;
+
+public class Collector
+{
+  public static void main(String args[])
+  {
+    int rows, i, j, count = 0;
+    Scanner sc = new Scanner(System.in);
+ 
+    System.out.print("Enter the no. of rows: ");
+    rows = sc.nextInt();
+ 
+    for (i = rows; i >= 1; i--)
+    {
+      for (j = rows; j >= i; j--)
+      {
+        System.out.print(j + " ");
+        count = j;
+      }
+ 
+      for (j = (rows - i + 1); j < rows; j++)
+        System.out.print(count + " ");
+ 
+      System.out.println();
+    }
+  }
+}
+
+output:
+
+55555
+54444
+54333
+54322
+54321
