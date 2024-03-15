@@ -6,7 +6,7 @@
 4.	public class Hello {
 5.	
 6.		public static void main(String[] args) {
-7.			
+7.			// Using for loop
 8.			for(int i=10;i<=50;i++)
 9.			{
 10.				System.out.println(i);
@@ -69,6 +69,7 @@ public class Hello {
 	{
 		
 		 int i=10;  
+                   //Using while loop
 		    while(i<=50){  
 		        System.out.println(i);  
 		    i++;  
@@ -131,10 +132,11 @@ public class Main {
 	{
 		
 		 Scanner sc=new Scanner(System.in);
+                   //Getting input from the user
 		 System.out.println("Enter the value:");
 		 int number=sc.nextInt();
 		 
-		 
+		 //using if to check the condition
 		 if(number>0) {
 			 
 			 System.out.println("The number is positive");
@@ -162,6 +164,8 @@ public class Main {
 	public static void main(String args[])
 	{
 	    Scanner sc=new Scanner(System.in);
+              //Getting input from the user
+
 		 System.out.println("Enter the value:");
 		 int number=sc.nextInt();
 		
@@ -191,6 +195,8 @@ public class Main {
 	public static void main(String args[])
 	{
 	    Scanner sc=new Scanner(System.in);
+              //Getting input from the user
+
 	    System.out.println("Enter the number1:");
 		 int num1=sc.nextInt();
 		 System.out.println("Enter the number2:");
@@ -199,7 +205,7 @@ public class Main {
 		 int num3=sc.nextInt();
 		
 		int smallest;
-		
+		// checking the condition comparing the value find the smallest one
 	     if(num1<num2) {
 	            if(num3<num1) {
 	                smallest = num3;
@@ -233,41 +239,29 @@ Enter the number3:
 •	If the purchase amount is greater than 1000, 20% applied
 
 
-import java.util.Scanner; 
+import java.util.Scanner;
 
 public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         //getting input
+        System.out.print("Enter the purchase amount: ");
+        double purchaseAmount = scanner.nextDouble();
+        double finalPayableAmount = 0;
+           //checking the condition 
+        if (purchaseAmount < 500) {
+            finalPayableAmount = purchaseAmount;
+        } else if (purchaseAmount >= 500 && purchaseAmount <= 1000) {
+            finalPayableAmount = purchaseAmount - (purchaseAmount * 0.1);
+        } else {
+            finalPayableAmount = purchaseAmount - (purchaseAmount * 0.2);
+        }
+           //pring final payable amount
+        System.out.println("Final payable amount: $" + finalPayableAmount);
 
-	
-
-	public static void main(String args[])
-	{
-	    float totalCost, cost, discount;
-	      Scanner scan = new Scanner(System.in);
-	      
-	      System.out.print("Enter the Total Amount of Shopping: ");
-	      totalCost = scan.nextFloat();
-	      if(totalCost<500)
-	      {
-	         cost = totalCost;
-	      }
-	      else if(totalCost>500 && totalCost<1000)
-	      {
-	         discount = (totalCost*10)/100;
-	         cost = totalCost - discount;
-	      }
-	      
-	      else
-	      {
-	         discount = (totalCost*20)/100;
-	         cost = totalCost - discount;
-	      }
-	      System.out.println("\nThe cost to be Paid is: " + cost);
-
-
-	    
-	}
-	}
-
+        scanner.close();
+    }
+}
 
 output:
 Enter the Total Amount of Shopping: 6789
@@ -287,10 +281,10 @@ public class Collector
   {
     int rows, i, j, count = 0;
     Scanner sc = new Scanner(System.in);
- 
+      //getting input
     System.out.print("Enter the no. of rows: ");
     rows = sc.nextInt();
- 
+   //using for loop
     for (i = rows; i >= 1; i--)
     {
       for (j = rows; j >= i; j--)
